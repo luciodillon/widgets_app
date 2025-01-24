@@ -26,5 +26,12 @@ const appMenuItems = <MenuItem>[
    subTitle: 'Un contenedor estilizado',
    link: '/cards',
    icon: Icons.credit_card, 
-  )
+  ),
+
+  MenuItem(
+   title: 'Contraseñas',
+   subTitle: 'Recuerda tus contraseñas',
+   link: '/passwords',
+   icon: Icons.password,
+  ) 
 ];
