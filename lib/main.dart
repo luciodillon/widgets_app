@@ -14,13 +14,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme(selectedColor: 6).getTheme(),
-        home: const HomeScreen(),
-        routes: {
-          '/buttons': (context) => const ButtonsScreen(),
-          '/cards': (context) => const CardsScreen(),
-        },
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedColor: 6).getTheme(),
+      home: const HomeScreen(),
+      // routes: {
+      //   '/buttons': (context) => const ButtonsScreen(),
+      //   '/cards': (context) => const CardsScreen(),
+      // },
     );
   }
 }
