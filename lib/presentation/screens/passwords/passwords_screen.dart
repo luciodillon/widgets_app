@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PasswordsScreen extends StatelessWidget {
+
+  static const String name = 'passwords_screen';
+
   const PasswordsScreen({super.key});
 
   @override
