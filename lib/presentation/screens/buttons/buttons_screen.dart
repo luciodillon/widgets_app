@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/config/theme/app_theme.dart';
 
 class ButtonsScreen extends StatelessWidget {
-
   static const String name = 'buttons_screen';
 
   const ButtonsScreen({super.key});
@@ -61,9 +59,7 @@ class _ButtonsView extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(Icons.text_fields_outlined),
                 label: Text('Text Icon')),
-
             const CustomButton(),
-
             IconButton(
                 onPressed: () {}, icon: Icon(Icons.import_contacts_outlined)),
             IconButton(
@@ -83,7 +79,6 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final colors = Theme.of(context).colorScheme;
 
     return ClipRRect(
@@ -93,9 +88,11 @@ class CustomButton extends StatelessWidget {
         child: InkWell(
           onTap: () {},
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: const Text('Hola Mundo',style: TextStyle(color: Colors.white),)
-            ),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: const Text(
+                'Hola Mundo',
+                style: TextStyle(color: Colors.white),
+              )),
         ),
       ),
     );
