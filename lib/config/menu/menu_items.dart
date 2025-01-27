@@ -36,6 +36,13 @@ const appMenuItems = <MenuItem>[
   ), 
 
   MenuItem(
+   title: 'SnackBars y Diálogos',
+   subTitle: 'Indicadores en pantalla',
+   link: '/snackbar',
+   icon: Icons.info_outline,
+  ), 
+
+  MenuItem(
    title: 'Animated',
    subTitle: 'Buenas animaciones',
    link: '/animated',
@@ -54,13 +61,6 @@ const appMenuItems = <MenuItem>[
    subTitle: 'Hacia el infinito y mas alla!',
    link: '/infinite',
    icon: Icons.casino_rounded,
-  ), 
-
-  MenuItem(
-   title: 'SnackBar',
-   subTitle: 'Yum',
-   link: '/snackbar',
-   icon: Icons.food_bank,
   ), 
 
   MenuItem(
