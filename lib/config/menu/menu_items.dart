@@ -29,9 +29,44 @@ const appMenuItems = <MenuItem>[
   ),
 
   MenuItem(
-   title: 'Contraseñas',
-   subTitle: 'Recuerda tus contraseñas',
-   link: '/passwords',
-   icon: Icons.password,
-  ) 
+   title: 'Animated',
+   subTitle: 'Buenas animaciones',
+   link: '/animated',
+   icon: Icons.animation_outlined,
+  ), 
+
+  MenuItem(
+   title: 'Tutorial',
+   subTitle: 'Hay que aprender!',
+   link: '/tutorial',
+   icon: Icons.book,
+  ), 
+
+  MenuItem(
+   title: 'Infinite Scroll',
+   subTitle: 'Hacia el infinito y mas alla!',
+   link: '/infinite',
+   icon: Icons.casino_rounded,
+  ), 
+
+  MenuItem(
+   title: 'SnackBar',
+   subTitle: 'Yum',
+   link: '/snackbar',
+   icon: Icons.food_bank,
+  ), 
+
+  MenuItem(
+   title: 'Progress',
+   subTitle: 'Gotta wait',
+   link: '/progress',
+   icon: Icons.bar_chart_rounded,
+  ), 
+
+  MenuItem(
+   title: 'UI Controls',
+   subTitle: 'Lets get to work',
+   link: '/ui_controls',
+   icon: Icons.control_point,
+  ), 
 ];
