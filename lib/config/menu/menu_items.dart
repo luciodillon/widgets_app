@@ -29,6 +29,13 @@ const appMenuItems = <MenuItem>[
   ),
 
   MenuItem(
+   title: 'Progress Indicators',
+   subTitle: 'Gotta wait',
+   link: '/progress',
+   icon: Icons.refresh_rounded,
+  ), 
+
+  MenuItem(
    title: 'Animated',
    subTitle: 'Buenas animaciones',
    link: '/animated',
@@ -54,13 +61,6 @@ const appMenuItems = <MenuItem>[
    subTitle: 'Yum',
    link: '/snackbar',
    icon: Icons.food_bank,
-  ), 
-
-  MenuItem(
-   title: 'Progress',
-   subTitle: 'Gotta wait',
-   link: '/progress',
-   icon: Icons.bar_chart_rounded,
   ), 
 
   MenuItem(
