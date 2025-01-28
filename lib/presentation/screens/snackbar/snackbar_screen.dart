@@ -7,7 +7,7 @@ class SnackbarScreen extends StatelessWidget {
   const SnackbarScreen({super.key});
 
   void showCustomSnackbar(BuildContext context) {
-    final snackbar = ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: const Text('Hola Mundo'),
       action: SnackBarAction(label: 'Ok!', onPressed: () {}),
       duration: Duration(seconds: 2),

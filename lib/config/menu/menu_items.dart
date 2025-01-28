@@ -50,6 +50,13 @@ const appMenuItems = <MenuItem>[
   ), 
 
   MenuItem(
+   title: 'UI Controls',
+   subTitle: 'Lets get to work',
+   link: '/ui_controls',
+   icon: Icons.control_point,
+  ), 
+
+  MenuItem(
    title: 'Tutorial',
    subTitle: 'Hay que aprender!',
    link: '/tutorial',
@@ -61,12 +68,5 @@ const appMenuItems = <MenuItem>[
    subTitle: 'Hacia el infinito y mas alla!',
    link: '/infinite',
    icon: Icons.casino_rounded,
-  ), 
-
-  MenuItem(
-   title: 'UI Controls',
-   subTitle: 'Lets get to work',
-   link: '/ui_controls',
-   icon: Icons.control_point,
   ), 
 ];
