@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SlideInfo {
   final String title;
@@ -31,16 +32,30 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: PageView(
-            physics: const BouncingScrollPhysics(),
-            children: slides
-                .map(
-                  (slideData) => _Slide(
-                      title: slideData.title,
-                      caption: slideData.caption,
-                      imageUrl: slideData.imageUrl),
-                )
-                .toList()));
+      backgroundColor: Colors.white,
+        body: Stack(
+          children: [
+            PageView(
+                physics: const BouncingScrollPhysics(),
+                children: slides
+                    .map(
+                      (slideData) => _Slide(
+                          title: slideData.title,
+                          caption: slideData.caption,
+                          imageUrl: slideData.imageUrl),
+                    )
+                    .toList()),
+
+            Positioned(
+              top: 50,
+              right: 0,
+              child: TextButton(
+                child: Text('Skip Tutorial'),
+                onPressed: () => context.pop(),
+              )
+            )
+          ],
+        ));
   }
 }
 
@@ -54,6 +69,25 @@ class _Slide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+
+    final tileStyle = Theme.of(context).textTheme.titleLarge;
+    final captionStyle = Theme.of(context).textTheme.titleLarge;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image(image: AssetImage(imageUrl)),
+            const SizedBox(height: 20),
+            Text(title, style: tileStyle,),
+            const SizedBox(height: 10),
+            Text(caption, style: captionStyle,),
+          ],
+        ),
+      ),
+      );
   }
 }
