@@ -32,7 +32,7 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         body: Stack(
           children: [
             PageView(
@@ -45,15 +45,13 @@ class AppTutorialScreen extends StatelessWidget {
                           imageUrl: slideData.imageUrl),
                     )
                     .toList()),
-
             Positioned(
-              top: 50,
-              right: 0,
-              child: TextButton(
-                child: Text('Skip Tutorial'),
-                onPressed: () => context.pop(),
-              )
-            )
+                top: 50,
+                right: 0,
+                child: TextButton(
+                  child: Text('Skip Tutorial'),
+                  onPressed: () => context.pop(),
+                ))
           ],
         ));
   }
@@ -69,7 +67,6 @@ class _Slide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final tileStyle = Theme.of(context).textTheme.titleLarge;
     final captionStyle = Theme.of(context).textTheme.titleLarge;
 
@@ -82,12 +79,18 @@ class _Slide extends StatelessWidget {
           children: [
             Image(image: AssetImage(imageUrl)),
             const SizedBox(height: 20),
-            Text(title, style: tileStyle,),
+            Text(
+              title,
+              style: tileStyle,
+            ),
             const SizedBox(height: 10),
-            Text(caption, style: captionStyle,),
+            Text(
+              caption,
+              style: captionStyle,
+            ),
           ],
         ),
       ),
-      );
+    );
   }
 }
