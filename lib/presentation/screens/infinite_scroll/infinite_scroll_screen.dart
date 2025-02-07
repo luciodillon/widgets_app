@@ -17,7 +17,6 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   bool isLoading = false;
   bool isMounted = true;
 
-
   @override
   void initState() {
     super.initState();
@@ -41,30 +40,24 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     final lastId = imagesIds.last;
 
     imagesIds.addAll(
-      [1,2,3,4,5].map((e) => lastId + e),
+      [1, 2, 3, 4, 5].map((e) => lastId + e),
     );
 
-    setState(() {
-      
-    });
+    setState(() {});
   }
 
   Future loadNextPage() async {
-
     if (isLoading) return;
     isLoading = true;
     setState(() {});
 
-    await Future.delayed(const Duration (seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
 
     addFiveImages();
-    isLoading = false;
 
-    if(!isMounted) return;
+    if (!isMounted) return;
 
-    setState(() {
-      
-    });
+    setState(() {});
     moveScrollToBottom();
   }
 
@@ -72,7 +65,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     isLoading = true;
 
     await Future.delayed(const Duration(seconds: 3));
-    if(!isMounted) return; 
+    if (!isMounted) return;
 
     isLoading = false;
     final lastId = imagesIds.last;
@@ -84,13 +77,11 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   }
 
   moveScrollToBottom() {
-    if(scrollController.position.pixels + 150 >= scrollController.position.maxScrollExtent) return;
+    if (scrollController.position.pixels + 150 >=
+        scrollController.position.maxScrollExtent) return;
 
-    scrollController.animateTo(
-      scrollController.position.pixels + 120,
-     duration: Duration(milliseconds: 300), 
-     curve: Curves.fastOutSlowIn
-     );
+    scrollController.animateTo(scrollController.position.pixels + 120,
+        duration: Duration(milliseconds: 300), curve: Curves.fastOutSlowIn);
   }
 
   @override
@@ -120,12 +111,11 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.pop(),
-        child: isLoading ? SpinPerfect(
-          infinite: true,
-          child: const Icon(Icons.refresh_outlined)
-        ): Icon(Icons.arrow_back_ios)
-      ),
+          onPressed: () => context.pop(),
+          child: isLoading
+              ? SpinPerfect(
+                  infinite: true, child: const Icon(Icons.refresh_outlined))
+              : Icon(Icons.arrow_back_ios)),
     );
   }
 }
