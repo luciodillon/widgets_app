@@ -1,62 +1,58 @@
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
-
     GoRoute(
       path: '/',
       name: HomeScreen.name,
       builder: (context, state) => HomeScreen(),
     ),
-
     GoRoute(
       path: '/buttons',
       name: ButtonsScreen.name,
       builder: (context, state) => ButtonsScreen(),
     ),
-
     GoRoute(
       path: '/cards',
       name: CardsScreen.name,
       builder: (context, state) => CardsScreen(),
     ),
-
     GoRoute(
-      path: '/tutorial',
-      name: AppTutorialScreen.name,
-      builder: (context, state) => AppTutorialScreen()
-    ),
-
+        path: '/tutorial',
+        name: AppTutorialScreen.name,
+        builder: (context, state) => AppTutorialScreen()),
     GoRoute(
-      path: '/animated',
-      name: AnimatedScreen.name,
-      builder: (context, state) => AnimatedScreen()
-    ),
-
+        path: '/animated',
+        name: AnimatedScreen.name,
+        builder: (context, state) => AnimatedScreen()),
     GoRoute(
-      path: '/infinite',
-      name: InfiniteScrollScreen.name,
-      builder: (context, state) => InfiniteScrollScreen()
-    ),
-
+        path: '/infinite',
+        name: InfiniteScrollScreen.name,
+        builder: (context, state) => InfiniteScrollScreen()),
     GoRoute(
-      path: '/progress',
-      name: ProgressScreen.name,
-      builder: (context, state) => ProgressScreen()
-    ),
-
+        path: '/progress',
+        name: ProgressScreen.name,
+        builder: (context, state) => ProgressScreen()),
     GoRoute(
-      path: '/snackbar',
-      name: SnackbarScreen.name,
-      builder: (context, state) => SnackbarScreen()
-    ),
-
+        path: '/snackbar',
+        name: SnackbarScreen.name,
+        builder: (context, state) => SnackbarScreen()),
     GoRoute(
-      path: '/ui_controls',
-      name: UiControlsScreen.name,
-      builder: (context, state) => UiControlsScreen()
-    ),
+        path: '/ui_controls',
+        name: UiControlsScreen.name,
+        builder: (context, state) => UiControlsScreen()),
+    GoRoute(
+        path: '/counter',
+        name: CounterScreen.name,
+        builder: (context, state) => CounterScreen()),
+        
+    GoRoute(
+        path: '/theme_changer',
+        name: ThemeChangerScreen.name,
+        builder: (context, state) => ThemeChangerScreen()),
   ],
 );

@@ -69,4 +69,18 @@ const appMenuItems = <MenuItem>[
    link: '/infinite',
    icon: Icons.casino_rounded,
   ), 
+
+  MenuItem(
+   title: 'Counter Screen',
+   subTitle: 'Un contador',
+   link: '/counter',
+   icon: Icons.plus_one,
+  ), 
+
+  MenuItem(
+   title: 'Theme Changer Screen',
+   subTitle: 'Cambia el tema',
+   link: '/theme_changer',
+   icon: Icons.dark_mode,
+  ), 
 ];

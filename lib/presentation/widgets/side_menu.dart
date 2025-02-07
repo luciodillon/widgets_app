@@ -58,7 +58,7 @@ class _SideMenuState extends State<SideMenu> {
           ),
 
           ...appMenuItems
-            .sublist(3, 8)
+            .sublist(3, 9)
             .map((item) => NavigationDrawerDestination(
                icon: Icon(item.icon), 
                label: Text(item.title),
